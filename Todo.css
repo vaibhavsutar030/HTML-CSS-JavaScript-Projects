@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('Images/bg_img.jpg');
+    background-size: cover;
+}
+
+.container {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.6); /* Transparent black background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 500px; /* Set container width */
+    max-width: 90%; /* Add maximum width for responsiveness */
+    text-align: center; /* Center align the content */
+}
+
+.container h1 {
+    margin: 0 0 20px; /* Add spacing below the heading */
+    color: rgb(247, 244, 244); /* Change the color value as desired */
+}
+
+.input {
+    margin-bottom: 20px; /* Add spacing below the input */
+}
+
+input[type="text"] {
+    width: 60%; /* Adjust the input width */
+    padding: 10px; /* Add padding to the input */
+    border: none; /* Remove input border */
+    border-radius: 5px; /* Add input border radius */
+}
+
+button {
+    background-color: rgba(0, 0, 0, 0.3); /* Transparent black background */
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px; /* Adjust button padding */
+    font-size: 16px; /* Adjust button font size */
+    border-radius: 5px; /* Add button border radius */
+    margin-right: 10px; /* Add spacing between buttons */
+}
+
+.text {
+    cursor: pointer;
+    color: white;
+    padding: 0; /* Reset the default padding of the <ul> element */
+    list-style-type: none; /* Remove the default list styles */
+    margin: 0; /* Remove default margin */
+    padding-top: 20px; /* Add spacing between input and tasks */
+    text-align: left; /* Align task text to the left */
+    counter-reset: todo-counter; /* Reset the counter for each list */
+}
+
+.text li {
+    text-align: left;
+    font-size: 17px;
+    line-height: 25px;
+    margin-bottom: 10px; /* Add space between tasks */
+    position: relative; /* Add positioning for the trash icon */
+}
+
+.text li i {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer; /* Add cursor style on hover */
+}
+
+.text li:before {
+    content: counter(todo-counter); /* Add task number */
+    counter-increment: todo-counter; /* Increment the counter */
+    margin-right: 10px; /* Add spacing between number and task */
+    color: white; /* Change number color */
+}
